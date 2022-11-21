@@ -54,7 +54,7 @@ if (isset($_SESSION['advisor'])) {
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link bg-tab" href="student_leases.php" aria-selected="false">
+                        <a class="nav-link " href="student_leases.php" aria-selected="false">
                             Leases
                         </a>
                     </li>

@@ -43,7 +43,7 @@ if (isset($_SESSION['advisor'])) {
                 <!-- Tabs -->
                 <ul class="nav nav-tabs my-auto ms-4 mb-3" >
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active bg-tab" href="student.php" role="tab" aria-selected="true">
+                        <a class="nav-link active " href="student.php" role="tab" aria-selected="true">
                             Profile
                         </a>
                     </li>
@@ -90,7 +90,7 @@ if (isset($_SESSION['advisor'])) {
 
                                 while($row = $result->fetch_assoc()) {
                                     echo '<tr>';
-                                    echo '<td class="fw-bold fs-4">ID</td>';
+                                    echo '<td class="fw-bold fs-4">Student ID</td>';
                                     echo '<td class="fs-4">'.$row["student_id"].'</td>';
                                     echo '</tr>';
 
