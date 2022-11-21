@@ -66,7 +66,7 @@ if (isset($_SESSION['staff'])) {
                 <div class="col-md-5">
                     <img src="images/profile.jpeg" class="img-fluid" alt="Profile image">
                 </div>
-                <!-- Student Profile -->
+                <!-- Advisor Profile -->
                 <div class="col-md-7 p-5 mb-4 bg-light rounded-3">
                     <h1 class="display-5 text-center fw-bold pb-2">Profile</h1>
                     <table class="table table-borderless">
