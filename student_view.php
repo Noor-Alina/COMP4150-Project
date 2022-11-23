@@ -72,7 +72,7 @@ if (isset($_SESSION['staff'])) {
                     <table class="table table-borderless">
                         <tbody>
                             <?php
-                                 $result = $connection->query("SELECT * FROM Student WHERE advisor_id=".$_SESSION['advisor']."");
+                                $result = $connection->query("SELECT * FROM Student WHERE student_id=".$_GET['student_id']."");
 
                                 while($row = $result->fetch_assoc()) {
                                     echo '<tr>';
