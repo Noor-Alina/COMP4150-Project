@@ -36,7 +36,7 @@ if (isset($_SESSION['advisor'])) {
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
                 <!-- Logo -->
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                     <i class="bi bi-circle-fill dark-blue-text" style="font-size: 3rem;"></i>
                     <span class="fs-1 fw-bold dark-blue-text" style="padding-left: 0.5rem;">UWindsor HMS</span>
                 </a>
