@@ -78,6 +78,7 @@ if (isset($_SESSION['advisor'])) {
                         <h1 class="bg-light rounded-3 pt-2 pb-2 mt-2">Leases</h1>
                     </div>
                     <div class="list-group list-group-flush pb-5 pt-3">
+                        <!-- Print this logged in user's leases -->
                         <?php
                             $result = $connection->query("SELECT * FROM Leases WHERE student_id=".$_SESSION['student']."");
 
@@ -98,6 +99,7 @@ if (isset($_SESSION['advisor'])) {
                         <h1 class="bg-light rounded-3 pt-2 pb-2 mt-2">Invoices</h1>
                     </div>
                     <div class="list-group list-group-flush pb-5 pt-3">
+                        <!-- Print this logged in invoices -->
                         <?php
                             $result = $connection->query("SELECT i.invoice_num, l.date_of_entry FROM Invoice i, Leases l WHERE l.student_id=".$_SESSION['student']." AND i.lease_num=l.lease_num");
 
@@ -118,6 +120,7 @@ if (isset($_SESSION['advisor'])) {
                         <h1 class="bg-light rounded-3 pt-2 pb-2 mt-2">Receipts</h1>
                     </div>
                     <div class="list-group list-group-flush pb-5 pt-3">
+                        <!-- Print this logged in user's receipts -->
                         <?php
                             $result = $connection->query("SELECT r.receipt_num, l.date_of_entry FROM Invoice i, Leases l, Receipt r WHERE l.student_id=".$_SESSION['student']." AND l.lease_num=i.lease_num AND i.invoice_num=r.invoice_num");
 

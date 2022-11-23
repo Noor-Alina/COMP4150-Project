@@ -81,6 +81,7 @@ if (isset($_SESSION['advisor'])) {
                         echo '<h1 class="display-5 text-center fw-bold pb-2">Receipt #'.$_GET['reciept_id'].'</h1>';
                     ?>
                     <table class="table table-borderless">
+                        <!-- Print receipt info -->
                         <tbody>
                             <?php
                                 $result = $connection->query("SELECT * FROM Receipt WHERE receipt_num=".$_GET['reciept_id']."");

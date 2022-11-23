@@ -1,4 +1,5 @@
 <?php
+// get semester and year of the date passed
 function semester($date) {
     $month = intval($date->format('m'));
     $year = $date->format('Y');

@@ -38,9 +38,6 @@ if ($result_advisor->num_rows <= 0 && $result_student->num_rows <= 0 && $result_
     exit();
 }
 
-// if the user exists we pull that row from the database
-// if ($row = $result->fetch_assoc()) {
-
 //  Advisor login
 if ($result_advisor->num_rows > 0) {
     $row = $result_advisor->fetch_assoc();

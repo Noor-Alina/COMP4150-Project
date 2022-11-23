@@ -65,6 +65,7 @@ if (isset($_SESSION['advisor'])) {
                 <?php
                     $result = $connection->query("SELECT fr.place_num, fr.room_num, fr.monthly_rent, f.flat_num, f.street, f.city, f.postal_code, f.num_single_beds  FROM Flat_rooms fr, Flats f WHERE fr.flat_num=f.flat_num");
 
+                    // Print each flat room info
                     while($row = $result->fetch_assoc()) {
                             echo '<div class="col-md-5 mb-4">';
                             echo '<div class="h-100 p-5 bg-light border rounded-3">';
@@ -121,6 +122,7 @@ if (isset($_SESSION['advisor'])) {
                 <?php
                     $result = $connection->query("SELECT hr.Place_num, hr.room_num, hr.monthly_rent, h.Hall_Name, h.street, h.city, h.postal_code, h.Hall_manager  FROM Hall_rooms hr, Halls_of_Residence h WHERE hr.Hall_Name=h.Hall_Name");
 
+                    // print each hall room info
                     while($row = $result->fetch_assoc()) {
                             echo '<div class="col-md-5 mb-4">';
                             echo '<div class="h-100 p-5 bg-light border rounded-3">';

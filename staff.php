@@ -82,6 +82,7 @@ if (isset($_SESSION['advisor'])) {
                             <?php
                                  $result = $connection->query("SELECT * FROM Hostel_staff WHERE Staff_num=".$_SESSION['staff']."");
 
+                                //  print staff info based on logged in staff_id
                                 while($row = $result->fetch_assoc()) {
                                     echo '<tr>';
                                     echo '<td class="fw-bold fs-4">ID</td>';

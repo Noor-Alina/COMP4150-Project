@@ -47,6 +47,7 @@ if (isset($_SESSION['student'])) {
                         <img src="images/login.jpeg" class="img-fluid" alt="Login image">
                     </div>
                     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                        <!-- Login form -->
                         <form method="POST" action="login_check.php">
                             <h1 class="h3 mb-4 fw-normal text-center dark-blue-text">Login</h1>
 

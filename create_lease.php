@@ -69,6 +69,7 @@ if (isset($_SESSION['advisor'])) {
                         <img src="images/create_lease.jpeg" class="img-fluid" alt="Apartment image">
                     </div>
                     <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1">
+                        <!-- Form for creating Lease -->
                         <form method="POST" action="lease_check.php">
                             <h1 class="h3 mb-4 fw-normal text-center dark-blue-text">Create Lease</h1>
                             
@@ -88,6 +89,7 @@ if (isset($_SESSION['advisor'])) {
                                     <?php
                                         $result = $connection->query("SELECT student_id FROM Student WHERE student_id NOT IN (SELECT student_id FROM Leases)");
 
+                                        // if a student doesn't have a lease add it to list of options
                                         while ($row = $result->fetch_assoc()) {
                                             echo '<option value="'.$row["student_id"].'">'.$row["student_id"].'</option>';
                                         }

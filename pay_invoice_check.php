@@ -35,7 +35,9 @@ if (empty($invoice_id) || empty($pay_method) || empty($pay_date)) {
     $second_remind_date = NULL;
 }
 
+// create receipt id
 $new_receipt_id = rand(0, 999999);
+
 $result_receipt = $connection->query("INSERT INTO Receipt VALUES('$new_receipt_id', '$invoice_id', '$pay_date', '$pay_method', NULLIF('$first_remind_date', ''), NULLIF('$second_remind_date', ''))");
 
 header("Location: staff.php");

@@ -31,6 +31,7 @@ if (empty($flat_num) || empty($staff_id) || empty($cond) || empty($comments) || 
     exit();
 }
 
+// create inspection id
 $new_inspect_id = rand(0, 999999);
 $result_invoice = $connection->query("INSERT INTO Flat_Inspections VALUES('$new_inspect_id', DATE '$inspect_date', '$cond','$comments', '$staff_id', '$flat_num')");
 

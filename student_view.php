@@ -74,6 +74,7 @@ if (isset($_SESSION['staff'])) {
                             <?php
                                 $result = $connection->query("SELECT * FROM Student WHERE student_id=".$_GET['student_id']."");
 
+                                // print students info based on passed student id
                                 while($row = $result->fetch_assoc()) {
                                     echo '<tr>';
                                     echo '<td class="fw-bold fs-4">Name</td>';

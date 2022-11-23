@@ -69,6 +69,7 @@ if (isset($_SESSION['advisor'])) {
                         <img src="images/pay.jpeg" class="img-fluid" alt="Apartment image">
                     </div>
                     <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1">
+                        <!-- Create paying invoice form -->
                         <form method="POST" action="pay_invoice_check.php">
                             <h1 class="h3 mb-4 fw-normal text-center dark-blue-text">Pay Invoice - User</h1>
                             

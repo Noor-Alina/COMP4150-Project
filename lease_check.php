@@ -25,6 +25,7 @@ $duration = $connection->real_escape_string($_POST['duration']);
 $start_date = $connection->real_escape_string($_POST['start_date']);
 $end_date = $connection->real_escape_string($_POST['end_date']);
 
+// if end date is before start date
 if ($start_date > $end_date) {
     $_SESSION['error'] = 'End date cannot be before Start time';
     header("Location: staff.php");
@@ -38,6 +39,7 @@ if (empty($type) || empty($id) || empty($student_id) || empty($duration) || empt
     exit();
 }
 
+// create random number for lease id
 $new_lease_id = rand(0, 999999);
 
 if ($type == "hall") {

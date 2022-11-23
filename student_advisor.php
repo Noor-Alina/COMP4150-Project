@@ -82,6 +82,7 @@ if (isset($_SESSION['advisor'])) {
                             <?php
                                  $result = $connection->query("SELECT sa.advisor_fname, sa.advisor_lname, sa.job_pos, sa.dept_name, sa.internal_ph, sa.room_number FROM Staff_Advisor sa, Student s WHERE s.student_id=".$_SESSION['student']." AND s.advisor_id = sa.advisor_id");
 
+                                //  print a student's advisor info based on student's advisor_id
                                 while($row = $result->fetch_assoc()) {
                                     echo '<tr>';
                                     echo '<td class="fw-bold fs-4">Name</td>';

@@ -74,6 +74,7 @@ if (isset($_SESSION['staff'])) {
                             <?php
                                  $result = $connection->query("SELECT * FROM Staff_Advisor WHERE advisor_id=".$_SESSION['advisor']."");
 
+                                // get advisor's details and show table of details to students
                                 while($row = $result->fetch_assoc()) {
                                     echo '<tr>';
                                     echo '<td class="fw-bold fs-4">Name</td>';

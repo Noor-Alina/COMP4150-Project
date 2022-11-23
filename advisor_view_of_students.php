@@ -74,6 +74,7 @@ if (isset($_SESSION['staff'])) {
                             <?php
                                  $result = $connection->query("SELECT * FROM Student WHERE advisor_id=".$_SESSION['advisor']."");
 
+                                //  If student's advisor_id matches the logged in advisor's advisor_id then have a button for student details
                                 while($row = $result->fetch_assoc()) {
                                     echo '<a href="student_view.php?student_id='.$row["student_id"].'" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between">';
                                     echo '<span class="fs-4">'.$row["student_id"].'</span>';
@@ -93,11 +94,3 @@ if (isset($_SESSION['staff'])) {
 
     </body>
 </html>
-
-<!-- echo '<a href="student_view.php?student_id='.$row["student_id"].'" class=""';
-                                    echo '<tr>';
-                                    echo '<td class="fs-4">'.$row["student_id"].'</td>';
-                                    echo '<td class="fs-4">'.$row["student_lname"].'</td>';
-                                    echo '<td class="fs-4">'.$row["student_fname"].'</td>';
-                                    echo '</tr>';
-                                    echo '</a>'; -->

@@ -82,6 +82,7 @@ if (isset($_SESSION['advisor'])) {
                     ?>
                     <table class="table table-borderless">
                         <tbody>
+                            <!-- Print invoice info -->
                             <?php
                                 $result = $connection->query("SELECT * FROM Invoice WHERE invoice_num=".$_GET['invoice_id']."");
                                 $row = $result->fetch_assoc();

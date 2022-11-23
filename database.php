@@ -6,6 +6,7 @@ define('DB_USERNAME', 'moham12y');
 define('DB_PASSWORD', '123456');
 define('DB_NAME', 'moham12y_uwin_hostel');
 
+// connect to database
 $connection = mysqli_connect(
     DB_SERVER,
     DB_USERNAME,

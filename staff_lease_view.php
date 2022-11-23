@@ -73,6 +73,7 @@ if (isset($_SESSION['advisor'])) {
                     ?>
                     <table class="table table-borderless">
                         <tbody>
+                            <!-- Print each lease info, with different labels depending on if hall or flat room -->
                             <?php
                                 $result = $connection->query("SELECT * FROM Leases WHERE lease_num=".$_GET['lease_id']."");
                                 $row = $result->fetch_assoc();
@@ -173,6 +174,7 @@ if (isset($_SESSION['advisor'])) {
                 <?php
                     $result = $connection->query("SELECT l.hall_place_num, fi.flat_inspect_id, fi.DO_Inspection, fi.Satisfaction_cond, fi.comments, hs.Staff_name FROM Leases l, Flat_rooms fr, Flat_Inspections fi, Hostel_staff hs WHERE l.lease_num=".$_GET['lease_id']." AND l.flat_place_num=fr.place_num AND fr.flat_num=fi.flat_num AND fi.Staff_num=hs.Staff_num");
 
+                    // print each lease info
                     while($row = $result->fetch_assoc()) {
                         if ($row["hall_place_num"] == null) {
                             echo '<div class="col-md-6 mb-4">';

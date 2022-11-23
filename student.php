@@ -133,6 +133,8 @@ if (isset($_SESSION['advisor'])) {
                         <?php
                             $result = $connection->query("SELECT current_status FROM Student WHERE student_id=".$_SESSION['student']."");
                             $row = $result->fetch_assoc();
+
+                            // print whether a student is logged in
                             if ($row['current_status'] = "placed") {
                                 echo '<p class="pt-3 ">Student is currently placed in a room.</p>';
                             } else {
@@ -141,6 +143,7 @@ if (isset($_SESSION['advisor'])) {
 
                             $result_rent = $connection->query("SELECT (SELECT (SUM(sl.monthly_rent*(sl.lease_duration/30))) FROM Student s, student_lease_info sl, Invoice i, Receipt r WHERE s.student_id = '".$_SESSION['student']."' AND s.student_id = sl.student_id AND sl.lease_num = i.lease_num AND i.invoice_num = r.invoice_num) as total");
 
+                            // print total rent student paid
                             if ($row_rent = $result_rent->fetch_assoc()) {
                                 if ($row_rent["total"] == null) {
                                     echo '<p class="pb-2">Student paid $0 in rent.</p>';
@@ -161,6 +164,7 @@ if (isset($_SESSION['advisor'])) {
                         <?php
                             $result = $connection->query("SELECT sa.advisor_fname, sa.advisor_lname, sa.job_pos FROM Staff_Advisor sa, Student s WHERE s.student_id=".$_SESSION['student']." AND s.advisor_id = sa.advisor_id");
 
+                            // print students advisor name and bare details
                             while($row = $result->fetch_assoc()) {
                                 echo '<table class="table table-borderless">';
                                 echo '<tbody>';
