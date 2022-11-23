@@ -49,6 +49,11 @@ if (isset($_SESSION['advisor'])) {
                             Rooms
                         </a>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="student_status.php" aria-selected="false">
+                            Students
+                        </a>
+                    </li>
                 </ul>  
 
                 <!-- Logout Buttons -->
