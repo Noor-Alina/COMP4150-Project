@@ -134,10 +134,22 @@ if (isset($_SESSION['advisor'])) {
                             $result = $connection->query("SELECT current_status FROM Student WHERE student_id=".$_SESSION['student']."");
                             $row = $result->fetch_assoc();
                             if ($row['current_status'] = "placed") {
-                                echo '<p class="pt-4 pb-4">Student is currently placed in a room.</p>';
+                                echo '<p class="pt-3 ">Student is currently placed in a room.</p>';
                             } else {
-                                echo '<p class="pb-4">Student is not currently placed in a room.</p>';
+                                echo '<p class="">Student is not currently placed in a room.</p>';
                             }
+
+                            $result_rent = $connection->query("SELECT (SELECT (SUM(sl.monthly_rent*(sl.lease_duration/30))) FROM Student s, student_lease_info sl, Invoice i, Receipt r WHERE s.student_id = '".$_SESSION['student']."' AND s.student_id = sl.student_id AND sl.lease_num = i.lease_num AND i.invoice_num = r.invoice_num) as total");
+
+                            if ($row_rent = $result_rent->fetch_assoc()) {
+                                if ($row_rent["total"] == null) {
+                                    echo '<p class="pb-2">Student paid $0 in rent.</p>';
+                                } else {
+                                    $total = round(floatval($row_rent["total"]), 2);
+                                    echo '<p class="pb-2">Student paid $' . $total . ' in rent.</p>';
+                                }
+                            }
+                            
                         ?>
                         <a class="btn btn-outline-light p-2" href="student_leases.php" role="button">Leases</a>
                     </div>

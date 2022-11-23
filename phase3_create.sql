@@ -54,6 +54,9 @@ FOREIGN KEY (student_id) references Student(student_id));
 
 INSERT INTO Student_Login VALUES(11124376,'contuck','!69Wma7%');
 INSERT INTO Student_Login VALUES(12345678,'jessyeck','Z%2u*79T');
+INSERT INTO Student_Login VALUES(11335578,'ciarsean','4v!E6*3m');
+INSERT INTO Student_Login VALUES(22348768,'andralb','5RusM91#');
+INSERT INTO Student_Login VALUES(11112222,'mohatad','4UI*4pn4');
 
 
 Create TABLE  Halls_of_Residence(
@@ -209,9 +212,9 @@ FROM Student;
 
 CREATE VIEW student_lease_info AS
 SELECT l.student_id, l.lease_num, h.hall_name, f.flat_num,
-CONCAT(h.place_num, f.place_num) as place_num, 
-CONCAT(h.room_num, f.room_num) as room_num, 
-CONCAT(h.monthly_rent, f.monthly_rent) as monthly_rent,
+CONCAT(COALESCE(h.place_num, ''), COALESCE(f.place_num, '')) as place_num, 
+CONCAT(COALESCE(h.room_num, ''), COALESCE(f.room_num, '')) as room_num, 
+CONCAT(COALESCE(h.monthly_rent, ''), COALESCE(f.monthly_rent, '')) as monthly_rent,
 l.date_of_entry as date_of_entry,
 l.date_of_exit as date_of_exit,
 l.date_of_exit - l.date_of_entry as lease_duration
