@@ -40,8 +40,11 @@ advisor_id VARCHAR(8) NOT NULL,
 PRIMARY KEY (student_id),
 FOREIGN KEY (advisor_id) references Staff_Advisor(advisor_id));
 
-INSERT INTO Student VALUES(11124376,'Connie','Tukcer',87,'305 - 14th Ave','Windsor ','N9C1A8E',DATE '2000-08-08','Female','Post Graduate','Canadian','Dietary','pollen Allergy','placed','Computer science',58173819);
-INSERT INTO Student VALUES(12345678,'Jess','Yeck',90,'2023 kitty Ave','Windsor ','N9b1w8',DATE '2002-12-18','Male','Undergraduate','Hungarian','Dietary','n/a','placed','Engineering',58173019);
+INSERT INTO Student VALUES(11124376,'Connie','Tukcer',87,'305 14th Ave','Windsor ','N9C1A8E',DATE '2000-08-08','Female','Post Graduate','Canadian','Dietary','pollen Allergy','placed','Computer science',58173819);
+INSERT INTO Student VALUES(12345678,'Jess','Yeck',90,'2023 Kitty Ave','Windsor ','N9b1w8',DATE '2002-12-18','Male','Undergraduate','Hungarian','Dietary','n/a','placed','Engineering',58173019);
+INSERT INTO Student VALUES(11335578,'Ciara','Sean',74,'193 Streets Ave.','Windsor ','N99A4D',DATE '1998-10-01','Female','Post Graduate','Irish','Dietary','Asthma','waiting','Biochemisty',58173819);
+INSERT INTO Student VALUES(22348768,'Andrea','Albert',75,'Gull Estate Lane','Windsor ','N1C33J',DATE '1998-10-01','Female','Post Graduate','Peruvian','N/A','Asthma','waiting','Biochemisty',58173819);
+INSERT INTO Student VALUES(11112222,'Mohamed','Tadesse',99,'Atlantic View Drive','Windsor ','N9WW3E',DATE '2001-10-01','Male','Undergraduate','Ethiopian','N/A','N/A','waiting','Political Science',58173019);
 
 CREATE TABLE Student_Login(
 student_id VARCHAR(8) NOT NULL,
@@ -75,6 +78,7 @@ FOREIGN KEY(Hall_Name) REFERENCES Halls_of_Residence(Hall_Name));
 
 INSERT INTO Hall_rooms values(34,'MCD',800.89,34);
 INSERT INTO Hall_rooms values(42,'MCD',600.23,24);
+INSERT INTO Hall_rooms values(25,'ECQ',1000.00,1);
 
 
 

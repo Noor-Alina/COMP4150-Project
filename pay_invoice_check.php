@@ -23,8 +23,6 @@ $pay_method = $connection->real_escape_string($_POST['pay_method']);
 $pay_date = $connection->real_escape_string($_POST['pay_date']);
 $first_remind_date = $connection->real_escape_string($_POST['first_remind_date']);
 $second_remind_date = $connection->real_escape_string($_POST['second_remind_date']);
-// $_SESSION['error'] = $second_remind_date;
-// header("Location: staff.php");
 
 // checking if the inputs are empty
 if (empty($invoice_id) || empty($pay_method) || empty($pay_date)) {

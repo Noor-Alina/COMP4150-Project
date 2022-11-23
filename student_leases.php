@@ -31,7 +31,7 @@ if (isset($_SESSION['advisor'])) {
             crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body class="d-flex flex-column align-content-stretch vh-100">
         <!-- Header -->
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
@@ -70,10 +70,10 @@ if (isset($_SESSION['advisor'])) {
         </div>
     
         <!-- Body -->
-        <div class="container py-4 h-75">
+        <main class="container h-75 my-3">
             <div class="row justify-content-evenly h-75">
                 <!-- Leases Column  -->
-                <div class="card col-sm-3">
+                <div class="card col-sm-3 my-2">
                     <div class=" text-center">
                         <h1 class="bg-light rounded-3 pt-2 pb-2 mt-2">Leases</h1>
                     </div>
@@ -93,7 +93,7 @@ if (isset($_SESSION['advisor'])) {
                     </div>
                 </div>
                 <!-- Invoices Column -->
-                <div class="card col-sm-3">
+                <div class="card col-sm-3 my-2">
                     <div class=" text-center">
                         <h1 class="bg-light rounded-3 pt-2 pb-2 mt-2">Invoices</h1>
                     </div>
@@ -113,7 +113,7 @@ if (isset($_SESSION['advisor'])) {
                     </div>
                 </div>
                 <!-- Receipts Column -->
-                <div class="card col-sm-3">
+                <div class="card col-sm-3 my-2">
                     <div class=" text-center">
                         <h1 class="bg-light rounded-3 pt-2 pb-2 mt-2">Receipts</h1>
                     </div>
@@ -133,7 +133,11 @@ if (isset($_SESSION['advisor'])) {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <?php 
+            include("templates/footer.php");
+        ?>
 
     </body>
 

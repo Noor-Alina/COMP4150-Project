@@ -46,6 +46,8 @@ if ($type == "hall") {
     $result = $connection->query("INSERT INTO Leases VALUES('$new_lease_id', NULL, '$id','$student_id', '$duration', DATE '$start_date', DATE '$end_date')");
 }
 
+$connection->query("UPDATE Student SET current_status='placed' WHERE student_id=$student_id");
+
 $pay_due = date('Y-m-d', strtotime($start_date . ' + 3 months'));
 $new_invoice_id = rand(0, 999999);
 

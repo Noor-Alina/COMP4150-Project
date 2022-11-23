@@ -62,7 +62,7 @@ if (isset($_SESSION['advisor'])) {
 
         <!-- Body -->
 
-        <section class="vh-100">
+        <main class="mb-4">
             <div class="container-fluid h-custom">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-md-9 col-lg-6 col-xl-5">
@@ -115,6 +115,10 @@ if (isset($_SESSION['advisor'])) {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
+   
+        <?php 
+            include("templates/footer.php");
+        ?>
     </body>
 </html>

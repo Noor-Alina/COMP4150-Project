@@ -31,7 +31,7 @@ if (isset($_SESSION['advisor'])) {
             crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body class="d-flex flex-column align-content-stretch vh-100">
         <!-- Header -->
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
@@ -70,7 +70,7 @@ if (isset($_SESSION['advisor'])) {
         </div>
     
         <!-- Body -->
-        <div class="container py-4">
+        <main class="container py-4">
             <!-- Invoice info -->
             <div class="row align-items-md-stretch">
                 <div class="col-md-5">
@@ -128,7 +128,11 @@ if (isset($_SESSION['advisor'])) {
                 </div>
             </div>
 
-        </div>
+        </main>
+
+        <?php 
+            include("templates/footer.php");
+        ?>
 
     </body>
 

@@ -69,7 +69,7 @@ if (isset($_SESSION['advisor'])) {
         </div>
     
         <!-- Body -->
-        <div class="container py-4">
+        <main class="container py-4">
             <div class="row align-items-md-stretch">
                 <div class="col-md-5">
                         <img src="images/profile.jpeg" class="img-fluid" alt="Profile image">
@@ -171,8 +171,11 @@ if (isset($_SESSION['advisor'])) {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
+        <?php 
+            include("templates/footer.php");
+        ?>
     </body>
 
 </html>

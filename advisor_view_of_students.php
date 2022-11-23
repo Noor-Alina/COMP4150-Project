@@ -27,7 +27,7 @@ if (isset($_SESSION['staff'])) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </head>
    
-    <body>
+    <body class="d-flex flex-column align-content-stretch vh-100">
         <!-- Header -->
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
@@ -61,7 +61,7 @@ if (isset($_SESSION['staff'])) {
         </div>
     
         <!-- Body -->
-        <div class="container py-4">
+        <main class="container py-4">
             <div class="row align-items-md-stretch">
                 <div class="col-md-5">
                     <img src="images/list.jpeg" class="img-fluid" alt="List image">
@@ -85,8 +85,11 @@ if (isset($_SESSION['staff'])) {
                      </div>
                 </div>
             </div>
-        </div>
+        </main>
    
+        <?php 
+            include("templates/footer.php");
+        ?>
 
     </body>
 </html>

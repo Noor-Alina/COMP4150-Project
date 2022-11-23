@@ -27,7 +27,7 @@ if (isset($_SESSION['advisor'])) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </head>
    
-    <body>
+    <body class="d-flex flex-column align-content-stretch vh-100">
         <!-- Header -->
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
@@ -61,8 +61,7 @@ if (isset($_SESSION['advisor'])) {
         </div>
 
         <!-- Body -->
-
-        <section class="vh-100">
+        <main >
             <div class="container-fluid h-custom">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-md-9 col-lg-6 col-xl-5">
@@ -105,6 +104,11 @@ if (isset($_SESSION['advisor'])) {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
+    
+        <?php 
+            include("templates/footer.php");
+        ?>
+
     </body>
 </html>

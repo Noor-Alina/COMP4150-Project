@@ -60,7 +60,7 @@ if (isset($_SESSION['advisor'])) {
             </header>
         </div>
     
-        <div class="row justify-content-around">
+        <main class="row justify-content-around">
                 <!-- Display Flat Rooms -->
                 <?php
                     $result = $connection->query("SELECT fr.place_num, fr.room_num, fr.monthly_rent, f.flat_num, f.street, f.city, f.postal_code, f.num_single_beds  FROM Flat_rooms fr, Flats f WHERE fr.flat_num=f.flat_num");
@@ -169,7 +169,11 @@ if (isset($_SESSION['advisor'])) {
                             echo '</div>';
                     }
                 ?>
-            </div>
+        </main>
+
+        <?php 
+            include("templates/footer.php");
+        ?>
 
     </body>
 </html>

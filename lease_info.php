@@ -70,7 +70,7 @@ if (isset($_SESSION['advisor'])) {
         </div>
     
         <!-- Body -->
-        <div class="container py-4">
+        <main class="container py-4">
             <!-- Lease info -->
             <div class="row align-items-md-stretch">
                 <div class="col-md-5">
@@ -216,7 +216,11 @@ if (isset($_SESSION['advisor'])) {
                 ?>
 
             </div>
-        </div>
+        </main>
+
+        <?php 
+            include("templates/footer.php");
+        ?>
 
     </body>
 

@@ -30,7 +30,7 @@ if (isset($_SESSION['advisor'])) {
             crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body class="d-flex flex-column align-content-stretch vh-100">
         <!-- Header -->
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
@@ -69,7 +69,7 @@ if (isset($_SESSION['advisor'])) {
         </div>
     
         <!-- Body -->
-        <div class="container py-4">
+        <main class="container py-4">
             <div class="row align-items-md-stretch">
                 <div class="col-md-5">
                     <img src="images/profile.jpeg" class="img-fluid" alt="Profile image">
@@ -115,7 +115,12 @@ if (isset($_SESSION['advisor'])) {
                     </table>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <?php 
+            include("templates/footer.php");
+        ?>
+
     </body>
 
 </html>
