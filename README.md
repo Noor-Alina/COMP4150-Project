@@ -6,6 +6,7 @@
 
 A hostel management application created as a project for a database course.  This application is mainly for managing student accommodation for a university.
 
+[Prototypes](prototypes/README.md)
 
 ## Login
 
