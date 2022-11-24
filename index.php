@@ -35,7 +35,7 @@ if (isset($_SESSION['student'])) {
                 <div class="row">
                     <div class="col-lg-5 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
                         <h1 class="display-4 lh-1 mb-3" style="color: #2B59A2;">UWindsor Hostel Management System</h1>
-                        <p class="col-lg-11 lead text-muted">Welcome to the University of Windsors' hostal management System. Please log in with your credentials for further access. </p>
+                        <p class="col-lg-11 lead text-muted">Welcome to the University of Windsors' hostel management System. Please log in with your credentials for further access. </p>
 
                     </div>
                     <div class="col-lg-7 order-1 order-lg-2 hero-img">

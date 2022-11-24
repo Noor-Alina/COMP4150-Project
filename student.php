@@ -30,7 +30,7 @@ if (isset($_SESSION['advisor'])) {
             crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body class="d-flex flex-column align-content-stretch vh-100">
         <!-- Header -->
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
@@ -139,7 +139,7 @@ if (isset($_SESSION['advisor'])) {
                                 echo '<p class="">Student is not currently placed in a room.</p>';
                             }
 
-                            $result_rent = $connection->query("SELECT (SELECT (SUM(sl.monthly_rent*(sl.lease_duration/30))) FROM Student s, student_lease_info sl, Invoice i, Receipt r WHERE s.student_id = '".$_SESSION['student']."' AND s.student_id = sl.student_id AND sl.lease_num = i.lease_num AND i.invoice_num = r.invoice_num) as total");
+                            $result_rent = $connection->query("SELECT (SELECT (SUM(sl.monthly_rent*(DATEDIFF(sl.date_of_exit, sl.date_of_entry)/30))) FROM Student s, student_lease_info sl, Invoice i, Receipt r WHERE s.student_id = '".$_SESSION['student']."' AND s.student_id = sl.student_id AND sl.lease_num = i.lease_num AND i.invoice_num = r.invoice_num) as total");
 
                             if ($row_rent = $result_rent->fetch_assoc()) {
                                 if ($row_rent["total"] == null) {

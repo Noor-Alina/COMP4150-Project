@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-md-4 px-4 justify-content-end d-flex align-items-center">
-       <p class="my-3  "><a class="link-dark" href="https://www.freepik.com/free-vector/">
+       <p class="my-3  "><a class="link-dark" href="https://www.freepik.com/author/vectorjuice">
         All Images by vectorjuice</a> on Freepik</p>
     </div>
 </footer>
