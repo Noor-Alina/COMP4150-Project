@@ -12,7 +12,8 @@ A hostel management application created as a project for a database course.  Thi
 ## Login
 
 ![Login Image](images/login_screenshot.png)
-The application has three types of users: [Students](#student-logins), [Student Advisors](#advisor-logins) and [Hostel Staff](#staff-logins).
+The application has three types of users: [Students](#student-logins) including Hall students and Flat students, [Student Advisors](#advisor-logins) and [Hostel Staff](#staff-logins).
+
 ### Student Logins
 | Username 	| Password 	|
 |----------	|----------	|
@@ -21,6 +22,7 @@ The application has three types of users: [Students](#student-logins), [Student 
 | ciarsean 	| 4v!E6*3m 	|
 | andralb  	| 5RusM91# 	|
 | mohatad  	| 4UI*4pn4 	|
+
 
 ### Advisor Logins
 | Username 	| Password 	|
